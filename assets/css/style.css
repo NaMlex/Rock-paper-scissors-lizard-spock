@@ -1,0 +1,44 @@
+/* Header */
+
+.game-actions {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px
+}
+
+/* Game Area */
+
+.game-area {
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    
+}
+ 
+/* Result */
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+h1 {
+    width: 150px;
+    display: inline;
+}
+
+h2 {
+    padding-top: 50px;
+    display: flex;
+    justify-content:  center;
+}
+
+/* Player Choice */
+
+.image {
+    width: 64px;
+    height: 64px;
+}
