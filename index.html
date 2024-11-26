@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+    <!--Header-->
     <header class="header">
         <h1>R.P.S.L.S</h1>
         <div class="game-actions">
@@ -14,7 +16,25 @@
             <button class="restart">Restart</button>
         </div>
     </header>
-    
+
+    <!--Main game area-->
+    <div class="main">
+        <h2>Make your choice</h2>
+        <div class="game-area">
+            <button class="player-choice" data-choice="rock"><img class="image" src="assets/images/rock.svg" alt="image of a rock"></button>
+            <button class="player-choice" data-choice="paper"><img class="image" src="assets/images/paper.svg" alt="image of a piece of paper"></button>
+            <button class="player-choice" data-choice="scissors"><img class="image" src="assets/images/scissor.svg" alt="image of scissors"></button>
+            <button class="player-choice" data-choice="lizard"><img class="image" src="assets/images/lizard.svg" alt="image of a lizard"></button>
+            <button class="player-choice" data-choice="spock"><img class="image" src="assets/images/spock.svg" alt="image of spock"></button>
+        </div>
+
+        <!--Results area-->
+        <div class="result">
+            <p class="scores">Round: <span class="round-score">0</span></p>
+            <p class="scores">Your score: <span class="your-score">0</span></p>
+            <p class="scores">Computer Score: <span class="computer-score">0</span></p>
+        </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
