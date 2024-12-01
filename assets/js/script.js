@@ -17,26 +17,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-/* Choices array */
-
+//Choices array 
 const choice = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
-/* Computer generates answer */
-
+//Computer generates answer 
 function computerChoice() {
     const pick = choice[Math.floor(Math.random() * choice.length)];
     return pick;
     }
 
-/* Your score */
-
+//Your score 
 function yourScore(){
     let your_score = document.querySelector(".your-score").innerText;
     document.querySelector(".your-score").innerText = ++your_score;
 }
 
-/* Computer Score */
-
+//Computer Score 
 function computerScore(){
     let computer_score = document.querySelector(".computer-score").innerText;
     document.querySelector(".computer-score").innerText = ++computer_score;
