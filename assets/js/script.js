@@ -133,11 +133,11 @@ function restartGame() {
     // Hide the Play Again button
     document.querySelector(".play-again").style.display = "none";
 
-  /*  // Enable player choices again
+    // Enable player choices again
     document.querySelectorAll(".player-choice").forEach(button => {
         button.disabled = false;
     });
-*/
+
     // Clear any previous result message
     document.querySelector(".choice-message").innerText = "";
     document.querySelector(".result-message").classList.remove('show');
