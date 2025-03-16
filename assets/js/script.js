@@ -80,7 +80,7 @@ function computerScore() {
 }
 
 // Round score calculation and update
-function roundGame(roundWinner) {
+function roundGame() {
     // If it's the first round, initialize round score
     if (round_Score === 0) {
         round_Score = 1;
@@ -102,9 +102,9 @@ function roundGame(roundWinner) {
 }
 
 // Game Over Function (Show Play Again button)
-function gameOver(winner, loser) {
+function gameOver(winner) {
     // Display game over message
-    document.querySelector(".choice-message").innerText = `${winner} wins the game!`;
+    document.querySelector(".final-result").innerText = `${winner} wins the game!`;
     document.querySelector(".result-message").classList.add('show');
     
     // Hide the player choice buttons and show the "Play Again" button
@@ -140,5 +140,6 @@ function restartGame() {
 
     // Clear any previous result message
     document.querySelector(".choice-message").innerText = "";
+    document.querySelector(".final-result").innerText = "";
     document.querySelector(".result-message").classList.remove('show');
 }
