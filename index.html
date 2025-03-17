@@ -13,12 +13,32 @@
         <h1>R.P.S.L.S</h1>
         <div class="game-actions">
             <button class="restart">Restart</button>
-        </div>
+            <button id="rules">Rules</button>
+        </div>   
     </header>
 
+    <!--Modal-->
+    <div id="modal">
+        <!--Modal help area-->
+     <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Rules of the game</h2>
+        <p>Scissors cuts Paper</p>
+        <p>Paper covers Rock</p>
+        <p>Rock crushes Lizard</p>
+        <p>Lizard poisons Spock</p>
+        <p>Spock smashes Scissors</p>
+        <p>Scissors decapitates Lizard</p>
+        <p>Lizard eats Paper</p>
+        <p>Paper disproves Spock</p>
+        <p>Spock vaporizes Rock</p>
+        <p>Rock crushes Scissors</p>
+     </div>
+    </div>
+    
     <!--Main game area-->
     <div class="main">
-        <h2>Make your choice</h2>
+        <h3>Make your choice</h3>
         <div class="game-area">
             <button class="player-choice" data-choice="rock"><img class="image" src="assets/images/rock.svg" alt="image of a rock"></button>
             <button class="player-choice" data-choice="paper"><img class="image" src="assets/images/paper.svg" alt="image of a piece of paper"></button>

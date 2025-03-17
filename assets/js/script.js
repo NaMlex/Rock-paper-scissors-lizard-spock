@@ -1,4 +1,7 @@
 const restartGameButton = document.querySelector(".restart");
+const rules = document.getElementById("rules");
+const modal = document.getElementById("modal");
+const span = document.getElementsByClassName("close")[0];
 const playAgainButton = document.querySelector(".play-again");
 let playerChoice;
 let computerChoice;
@@ -143,3 +146,13 @@ function restartGame() {
     document.querySelector(".final-result").innerText = "";
     document.querySelector(".result-message").classList.remove('show');
 }
+
+// Rules of the Game
+rules.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
