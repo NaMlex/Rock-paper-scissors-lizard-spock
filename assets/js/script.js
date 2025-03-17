@@ -32,15 +32,20 @@ restartGameButton.addEventListener('click', function() {
 // Choices array 
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
-// Computer generates answer 
+/** 
+ * function that generates the computer answer 
+ * @returns {object} 
+ */
 function getComputerChoice() {
     const pick = choices[Math.floor(Math.random() * choices.length)];
     return pick;
 }
 
-// Determine the result and display it
+/** 
+ * function gets the result and display it
+ */
 function displayResult() {
-    // Get computer's choice
+
     computerChoice = getComputerChoice();
 
     let message = '';
@@ -70,21 +75,31 @@ function displayResult() {
     roundGame(roundWinner);
 }
 
-// Update your score 
+/** 
+ * function updates your score 
+ * @param{number} increment +1
+ */
 function yourScores() {
     yourScore++;
     document.querySelector(".your-score").innerText = yourScore;
 }
 
-// Update computer's score 
+/** 
+ * function updates computer's score
+ * @param{number} increment +1
+ */
 function computerScores() {
     computerScore++;
     document.querySelector(".computer-score").innerText = computerScore;
 }
 
-// Round score calculation and update
+/** 
+ * function calculates the round score and updates it
+ * if it's the first round, initialize round score
+ * checks if the round score has reached 5
+ */
 function roundGame() {
-    // If it's the first round, initialize round score
+
     if(roundScore === 0) {
         roundScore = 1;
     } else {
@@ -92,7 +107,7 @@ function roundGame() {
     }
     document.querySelector(".round-score").innerText = roundScore;
 
-    // Check if round score has reached 5
+
     if(roundScore === 5) {
         if(yourScore > computerScore) {
             gameOver('Player', 'Computer');
@@ -104,27 +119,35 @@ function roundGame() {
     }
 }
 
-// Game Over Function (Show Play Again button)
+/** 
+ * game Over Function (Show Play Again button)
+ * display game over message
+ * hide the player choice buttons and show the "Play Again" button
+ * show the Play Again button
+ * play Again Function
+ */
 function gameOver(winner) {
-    // Display game over message
+
     document.querySelector(".final-result").innerText = `${winner} wins the game!`;
     document.querySelector(".result-message").classList.add('show');
 
-    // Hide the player choice buttons and show the "Play Again" button
     document.querySelectorAll(".player-choice").forEach(button => {
         button.disabled = true;
     });
 
-    // Show the Play Again button
     document.querySelector(".play-again").style.display = "inline-block";
 }
 
-// Play Again Function
 document.querySelector(".play-again").addEventListener('click', function() {
     restartGame();
 });
 
-// Restart the game
+/** 
+ * restart the game
+ * hide the Play Again button
+ * enable player choices again
+ * clear any previous result message
+ */
 function restartGame() {
     yourScore = 0;
     computerScore = 0;
@@ -132,22 +155,21 @@ function restartGame() {
     document.querySelector(".your-score").innerText = yourScore;
     document.querySelector(".computer-score").innerText = computerScore;
     document.querySelector(".round-score").innerText = roundScore;
-
-    // Hide the Play Again button
     document.querySelector(".play-again").style.display = "none";
 
-    // Enable player choices again
+
     document.querySelectorAll(".player-choice").forEach(button => {
         button.disabled = false;
     });
 
-    // Clear any previous result message
     document.querySelector(".choice-message").innerText = "";
     document.querySelector(".final-result").innerText = "";
     document.querySelector(".result-message").classList.remove('show');
 }
 
-// Rules of the Game
+/** 
+ * rules of the Game
+ */
 rules.onclick = function() {
     modal.style.display = "block";
 }

@@ -15,7 +15,7 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  padding: 0.625rem;
+  padding: 10px;
   /* Added padding to prevent edges from touching */
   flex-direction: column;
 }
@@ -23,35 +23,35 @@ body {
 /* Header Styles */
 .header {
   color: #fff;
-  padding: 1.25rem 0;
+  padding: 20px 0;
   width: 100%;
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
   /* Added bottom margin to create space below header */
 }
 
 .header h1 {
   font-size: 2.25rem;
-  margin-bottom: 0.625rem;
+  margin-bottom: 10px;
 }
 
 /* Game Action Buttons */
 .game-actions {
   display: flex;
   justify-content: center;
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .game-actions button {
   background-color: #ff7b00;
   color: #fff;
   border: none;
-  padding: 0.625rem 1.25rem;
-  margin: 0.625rem;
+  padding: 10px 20px;
+  margin: 10px;
   cursor: pointer;
   font-size: 1rem;
-  border-radius: 0.313rem;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
@@ -67,7 +67,7 @@ body {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding-top: 6.25rem;
+  padding-top: 100px;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -90,17 +90,17 @@ body {
 /* Modal Content */
 .modal-content {
   background-color: black;
-  border: 0.063rem solid #888;
+  border: 1px solid #888;
   padding: 0.5em 0;
   margin: 2% auto;
-  width: 18.75rem;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
   gap: 1em;
-  box-shadow: 0 0 0.625rem 0.375rem var(--light);
-  border-radius: 1.25rem;
+  box-shadow: 0 0 10px 6px var(--light);
+  border-radius: 20px;
   color: #fff;
   font-size: 1.125rem;
 }
@@ -118,11 +118,11 @@ body {
   background-color: #ff7b00;
   color: #fff;
   border: none;
-  padding: 0.625rem 1.25rem;
-  margin: 0.625rem;
+  padding: 10px 20px;
+  margin: 10px;
   cursor: pointer;
   font-size: 1rem;
-  border-radius: 0.313rem;
+  border-radius: 5px;
 }
 
 .play-again:hover {
@@ -132,10 +132,10 @@ body {
 /* Main Game Area */
 .main {
   background-color: #fff;
-  border-radius: 0.938rem;
-  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
-  padding: 1.875rem;
-  max-width: 31.25rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 500px;
   width: 100%;
   flex-grow: 1;
   /* Allow the main game area to grow and fill available space */
@@ -147,13 +147,13 @@ body {
 /* Main Heading */
 h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
   color: white;
 }
 
 h3 {
   font-size: 1.5rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
   color: #333;
 }
 
@@ -161,21 +161,21 @@ h3 {
 .game-area {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
   flex-wrap: wrap;
   /* Allow wrapping for smaller screens */
-  gap: 0.625rem;
+  gap: 10px;
 }
 
 .player-choice {
   background-color: #f1f1f1;
   border: none;
   border-radius: 50%;
-  padding: 0.625rem;
+  padding: 10px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
-  width: 4.375rem;
-  height: 4.375rem;
+  width: 70px;
+  height: 70px;
 }
 
 .player-choice:hover {
@@ -185,18 +185,18 @@ h3 {
 }
 
 .player-choice img {
-  width: 3.125rem;
-  height: 3.125rem;
+  width: 50px;
+  height: 50px;
 }
 
 /* Results Area */
 .result {
-  margin-top: 1.25rem;
+  margin-top: 20px;
 }
 
 .scores {
   font-size: 1.125rem;
-  margin: 0.625rem 0;
+  margin: 10px 0;
   font-weight: bold;
 }
 
@@ -212,7 +212,7 @@ h3 {
 }
 
 .result-message {
-  margin-top: 1.25rem;
+  margin-top: 20px;
   font-size: 1.25rem;
   font-weight: bold;
   color: #3b4a69;
