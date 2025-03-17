@@ -5,7 +5,7 @@ const span = document.getElementsByClassName("close")[0];
 const playAgainButton = document.querySelector(".play-again");
 let playerChoice;
 let computerChoice;
-let yourScore = 0; 
+let yourScore = 0;
 let computerScore = 0;
 let roundScore = 0;
 
@@ -13,7 +13,7 @@ let roundScore = 0;
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.querySelectorAll(".player-choice");
 
-    for (let button of buttons) {
+    for(let button of buttons) {
         button.addEventListener("click", function() {
             playerChoice = this.getAttribute("data-choice");
             displayResult();
@@ -46,14 +46,14 @@ function displayResult() {
     let message = '';
     let roundWinner = '';
 
-    if (playerChoice === computerChoice) {
+    if(playerChoice === computerChoice) {
         message = `It's a tie! You both picked ${computerChoice}.`;
         roundWinner = 'tie';
-    } else if ((playerChoice === 'rock' && (computerChoice === 'scissors' || computerChoice === 'lizard')) ||
-               (playerChoice === 'paper' && (computerChoice === 'rock' || computerChoice === 'spock')) ||
-               (playerChoice === 'scissors' && (computerChoice === 'paper' || computerChoice === 'lizard')) ||
-               (playerChoice === 'lizard' && (computerChoice === 'paper' || computerChoice === 'spock')) ||
-               (playerChoice === 'spock' && (computerChoice === 'rock' || computerChoice === 'scissors'))) {
+    } else if((playerChoice === 'rock' && (computerChoice === 'scissors' || computerChoice === 'lizard')) ||
+        (playerChoice === 'paper' && (computerChoice === 'rock' || computerChoice === 'spock')) ||
+        (playerChoice === 'scissors' && (computerChoice === 'paper' || computerChoice === 'lizard')) ||
+        (playerChoice === 'lizard' && (computerChoice === 'paper' || computerChoice === 'spock')) ||
+        (playerChoice === 'spock' && (computerChoice === 'rock' || computerChoice === 'scissors'))) {
         message = `You win! The computer picked ${computerChoice}.`;
         yourScores();
         roundWinner = 'player';
@@ -66,7 +66,7 @@ function displayResult() {
     // Show message and round results
     document.querySelector(".choice-message").innerText = message;
     document.querySelector(".result-message").classList.add('show');
-    
+
     roundGame(roundWinner);
 }
 
@@ -85,7 +85,7 @@ function computerScores() {
 // Round score calculation and update
 function roundGame() {
     // If it's the first round, initialize round score
-    if (roundScore === 0) {
+    if(roundScore === 0) {
         roundScore = 1;
     } else {
         roundScore++;
@@ -93,10 +93,10 @@ function roundGame() {
     document.querySelector(".round-score").innerText = roundScore;
 
     // Check if round score has reached 5
-    if (roundScore === 5) {
-        if (yourScore > computerScore) {
+    if(roundScore === 5) {
+        if(yourScore > computerScore) {
             gameOver('Player', 'Computer');
-        } else if (yourScore < computerScore) {
+        } else if(yourScore < computerScore) {
             gameOver('Computer', 'Player');
         } else {
             gameOver('No one', 'No one');
@@ -109,7 +109,7 @@ function gameOver(winner) {
     // Display game over message
     document.querySelector(".final-result").innerText = `${winner} wins the game!`;
     document.querySelector(".result-message").classList.add('show');
-    
+
     // Hide the player choice buttons and show the "Play Again" button
     document.querySelectorAll(".player-choice").forEach(button => {
         button.disabled = true;
@@ -155,4 +155,3 @@ rules.onclick = function() {
 span.onclick = function() {
     modal.style.display = "none";
 }
-
