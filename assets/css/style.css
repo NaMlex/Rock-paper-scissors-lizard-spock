@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     padding: 10px; /* Added padding to prevent edges from touching */
     flex-direction: column;
@@ -72,6 +72,10 @@
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+.hidden {
+  display: none;
+}
+
 /* Modal Content */
 .modal-content {
   background-color: black;
@@ -79,7 +83,6 @@
   padding: 0.5em 0;
   margin: 2% auto;
   width: 300px;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,7 +135,7 @@
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
   }
   
   h3 {
@@ -205,86 +208,6 @@
   
   .result-message.show {
     opacity: 1;
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 600px) {
-    /* Adjustments for small screens */
-    .game-actions {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .game-area {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-  
-    .player-choice {
-      width: 60px;
-      height: 60px;
-      margin: 10px;
-    }
-  
-    h2 {
-      font-size: 20px;
-    }
-  
-    .header h1 {
-      font-size: 28px;
-    }
-  
-    .scores {
-      font-size: 16px;
-    }
-  
-    .round-score {
-      font-size: 20px;
-    }
-  
-    .result-message {
-      font-size: 18px;
-    }
-  }
-  
-  /* Tablet Responsiveness */
-  @media (max-width: 768px) {
-    /* Adjustments for tablet screens */
-    .game-actions {
-      gap: 20px;
-      justify-content: center;
-    }
-  
-    .game-area {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .player-choice {
-      width: 70px;
-      height: 70px;
-    }
-  
-    .header h1 {
-      font-size: 32px;
-    }
-  
-    h2 {
-      font-size: 22px;
-    }
-  
-    .scores {
-      font-size: 18px;
-    }
-  
-    .round-score {
-      font-size: 20px;
-    }
-  
-    .result-message {
-      font-size: 18px;
-    }
   }
   
   
