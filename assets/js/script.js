@@ -5,9 +5,9 @@ const span = document.getElementsByClassName("close")[0];
 const playAgainButton = document.querySelector(".play-again");
 let playerChoice;
 let computerChoice;
-let your_Score = 0; 
-let computer_Score = 0;
-let round_Score = 0;
+let yourScore = 0; 
+let computerScore = 0;
+let roundScore = 0;
 
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function() {
@@ -55,11 +55,11 @@ function displayResult() {
                (playerChoice === 'lizard' && (computerChoice === 'paper' || computerChoice === 'spock')) ||
                (playerChoice === 'spock' && (computerChoice === 'rock' || computerChoice === 'scissors'))) {
         message = `You win! The computer picked ${computerChoice}.`;
-        yourScore();
+        yourScores();
         roundWinner = 'player';
     } else {
         message = `You lose! The computer picked ${computerChoice}.`;
-        computerScore();
+        computerScores();
         roundWinner = 'computer';
     }
 
@@ -71,32 +71,32 @@ function displayResult() {
 }
 
 // Update your score 
-function yourScore() {
-    your_Score++;
-    document.querySelector(".your-score").innerText = your_Score;
+function yourScores() {
+    yourScore++;
+    document.querySelector(".your-score").innerText = yourScore;
 }
 
 // Update computer's score 
-function computerScore() {
-    computer_Score++;
-    document.querySelector(".computer-score").innerText = computer_Score;
+function computerScores() {
+    computerScore++;
+    document.querySelector(".computer-score").innerText = computerScore;
 }
 
 // Round score calculation and update
 function roundGame() {
     // If it's the first round, initialize round score
-    if (round_Score === 0) {
-        round_Score = 1;
+    if (roundScore === 0) {
+        roundScore = 1;
     } else {
-        round_Score++;
+        roundScore++;
     }
-    document.querySelector(".round-score").innerText = round_Score;
+    document.querySelector(".round-score").innerText = roundScore;
 
     // Check if round score has reached 5
-    if (round_Score === 5) {
-        if (your_Score > computer_Score) {
+    if (roundScore === 5) {
+        if (yourScore > computerScore) {
             gameOver('Player', 'Computer');
-        } else if (your_Score < computer_Score) {
+        } else if (yourScore < computerScore) {
             gameOver('Computer', 'Player');
         } else {
             gameOver('No one', 'No one');
@@ -126,12 +126,12 @@ document.querySelector(".play-again").addEventListener('click', function() {
 
 // Restart the game
 function restartGame() {
-    your_Score = 0;
-    computer_Score = 0;
-    round_Score = 0;
-    document.querySelector(".your-score").innerText = your_Score;
-    document.querySelector(".computer-score").innerText = computer_Score;
-    document.querySelector(".round-score").innerText = round_Score;
+    yourScore = 0;
+    computerScore = 0;
+    roundScore = 0;
+    document.querySelector(".your-score").innerText = yourScore;
+    document.querySelector(".computer-score").innerText = computerScore;
+    document.querySelector(".round-score").innerText = roundScore;
 
     // Hide the Play Again button
     document.querySelector(".play-again").style.display = "none";
